@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>APPLICANT LIST</title>
+</head>
+<body>
+
+{% for candidate in applicant_list %}
+<li> {{candidate.name}} </li>
+{% endfor %}
+</body>
+</html>

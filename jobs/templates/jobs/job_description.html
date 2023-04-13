@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JOB DETAILS</title>
+</head>
+<body>
+{% if job_desc %}
+<h2> JOB ROLE </h2>
+{{job_desc.role}}
+<br>
+<h2> JOB DESCRIPTION </h2>
+{{job_desc.description_text}}
+<br>
+<h2> PUBLISHED ON </h2>
+{{job_desc.pub_date}}
+templates_explanation.md
+
+{% else %}
+<h2> There is NO job description available in our database </h2>
+{% endif %}
+</body>
+</html>

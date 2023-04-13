@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Titles</title>
+</head>
+<body>
+
+{% for job_title in objects %}
+<li> <a href="{{job_title.id}}"> {{job_title.title}} </a></li>
+{% endfor %}
+
+</body>
+</html>

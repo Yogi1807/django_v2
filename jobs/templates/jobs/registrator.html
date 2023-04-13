@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>APPLICANTS</title>
+</head>
+<body>
+{% if applicants %}
+
+<h2>NAME OF APPLICANTS</h2>
+<h3> {{applicants.name}}</h3>
+<h2>JOB APPLIED</h2>
+<h3> {{applicants.applied_for}}</h3>
+<h2>COVER LETTER</h2>
+<h3> {{applicants.cover_letter}}</h3>
+{% else %}
+<h2> NO APPLICANTS FOUND </h2>
+
+{% endif %}
+</body>
+</html>
