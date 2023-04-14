@@ -28,7 +28,7 @@ class JobDescriptionSerializer(serializers.Serializer):
         return JobDescription.objects.create(**validated_data)
 
 
-class JobTitleSerializer(serializers.Serializer):
+class JobTitleSerializer(serializers.ModelSerializer):
     """
     TODO
     Refer following document nested serializer-
@@ -41,6 +41,11 @@ class JobTitleSerializer(serializers.Serializer):
     # how to define relationship fields in serializers
     job_description = JobDescriptionSerializer(required=True)
     portal = PortalSerializer(required=True)
+
+    class Meta:
+        model = JobTitle
+        fields = '__all__'
+        depth = 1
 
     def create(self, validated_data):
         # additional checks
